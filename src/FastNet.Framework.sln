@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastNet.Framework.Dapper", "FastNet.Framework.Dapper\FastNet.Framework.Dapper.csproj", "{28C76F8A-D729-4139-B330-CDFF6D138468}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastNet.Framework.RabbitMQ", "FastNet.Framework.RabbitMQ\FastNet.Framework.RabbitMQ.csproj", "{F74C8B43-E336-4E63-916A-E7A41D8D9FBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F9AB4B50-A92B-4FE5-AA61-CBF5630885BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.RabbitMq.Publisher", "Test\Test.RabbitMq.Publisher\Test.RabbitMq.Publisher.csproj", "{2827A794-35DD-4628-8561-9E0787ECF6DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.RabbitMq.Consumer", "Test\Test.RabbitMq.Consumer\Test.RabbitMq.Consumer.csproj", "{4F1D9855-C565-4871-8878-55415479C3AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastNet.Framework.Redis", "FastNet.Framework.Redis\FastNet.Framework.Redis.csproj", "{3D00C0A4-3B18-48C2-ABFE-A3BE314774D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28C76F8A-D729-4139-B330-CDFF6D138468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28C76F8A-D729-4139-B330-CDFF6D138468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28C76F8A-D729-4139-B330-CDFF6D138468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28C76F8A-D729-4139-B330-CDFF6D138468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F74C8B43-E336-4E63-916A-E7A41D8D9FBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F74C8B43-E336-4E63-916A-E7A41D8D9FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F74C8B43-E336-4E63-916A-E7A41D8D9FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F74C8B43-E336-4E63-916A-E7A41D8D9FBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2827A794-35DD-4628-8561-9E0787ECF6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2827A794-35DD-4628-8561-9E0787ECF6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2827A794-35DD-4628-8561-9E0787ECF6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2827A794-35DD-4628-8561-9E0787ECF6DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F1D9855-C565-4871-8878-55415479C3AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F1D9855-C565-4871-8878-55415479C3AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F1D9855-C565-4871-8878-55415479C3AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F1D9855-C565-4871-8878-55415479C3AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D00C0A4-3B18-48C2-ABFE-A3BE314774D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D00C0A4-3B18-48C2-ABFE-A3BE314774D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D00C0A4-3B18-48C2-ABFE-A3BE314774D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D00C0A4-3B18-48C2-ABFE-A3BE314774D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2827A794-35DD-4628-8561-9E0787ECF6DF} = {F9AB4B50-A92B-4FE5-AA61-CBF5630885BD}
+		{4F1D9855-C565-4871-8878-55415479C3AF} = {F9AB4B50-A92B-4FE5-AA61-CBF5630885BD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {376F4A8D-BEE8-41B1-BDFC-A96E4447563A}
+	EndGlobalSection
+EndGlobal

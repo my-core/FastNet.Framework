@@ -1,0 +1,8 @@
+E:\git_project\StockNiu.NewsService\XunZhi.Framework\XunZhi.Framework.Mongo\bin\Release\netstandard2.0\XunZhi.Framework.Mongo.deps.json
+E:\git_project\StockNiu.NewsService\XunZhi.Framework\XunZhi.Framework.Mongo\bin\Release\netstandard2.0\XunZhi.Framework.Mongo.dll
+E:\git_project\StockNiu.NewsService\XunZhi.Framework\XunZhi.Framework.Mongo\bin\Release\netstandard2.0\XunZhi.Framework.Mongo.pdb
+E:\git_project\StockNiu.NewsService\XunZhi.Framework\XunZhi.Framework.Mongo\obj\Release\netstandard2.0\XunZhi.Framework.Mongo.csprojAssemblyReference.cache
+E:\git_project\StockNiu.NewsService\XunZhi.Framework\XunZhi.Framework.Mongo\obj\Release\netstandard2.0\XunZhi.Framework.Mongo.AssemblyInfoInputs.cache
+E:\git_project\StockNiu.NewsService\XunZhi.Framework\XunZhi.Framework.Mongo\obj\Release\netstandard2.0\XunZhi.Framework.Mongo.AssemblyInfo.cs
+E:\git_project\StockNiu.NewsService\XunZhi.Framework\XunZhi.Framework.Mongo\obj\Release\netstandard2.0\XunZhi.Framework.Mongo.dll
+E:\git_project\StockNiu.NewsService\XunZhi.Framework\XunZhi.Framework.Mongo\obj\Release\netstandard2.0\XunZhi.Framework.Mongo.pdb

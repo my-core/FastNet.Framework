@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastNet.Framework.Dapper", "FastNet.Framework.Dapper\FastNet.Framework.Dapper.csproj", "{28C76F8A-D729-4139-B330-CDFF6D138468}"
 EndProject
@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.RabbitMq.Publisher", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.RabbitMq.Consumer", "Test\Test.RabbitMq.Consumer\Test.RabbitMq.Consumer.csproj", "{4F1D9855-C565-4871-8878-55415479C3AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastNet.Framework.Redis", "FastNet.Framework.Redis\FastNet.Framework.Redis.csproj", "{3D00C0A4-3B18-48C2-ABFE-A3BE314774D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastNet.Framework.Redis", "FastNet.Framework.Redis\FastNet.Framework.Redis.csproj", "{3D00C0A4-3B18-48C2-ABFE-A3BE314774D7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastNet.Framework.Mongo", "FastNet.Framework.Mongo\FastNet.Framework.Mongo.csproj", "{C0F58327-7EA0-4875-9DBB-87619098C825}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Redis", "Test\Test.Redis\Test.Redis.csproj", "{373DA5E0-C6A8-42F7-BCBC-3D1B3FADA505}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,14 @@ Global
 		{3D00C0A4-3B18-48C2-ABFE-A3BE314774D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D00C0A4-3B18-48C2-ABFE-A3BE314774D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D00C0A4-3B18-48C2-ABFE-A3BE314774D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0F58327-7EA0-4875-9DBB-87619098C825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F58327-7EA0-4875-9DBB-87619098C825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F58327-7EA0-4875-9DBB-87619098C825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F58327-7EA0-4875-9DBB-87619098C825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{373DA5E0-C6A8-42F7-BCBC-3D1B3FADA505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{373DA5E0-C6A8-42F7-BCBC-3D1B3FADA505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{373DA5E0-C6A8-42F7-BCBC-3D1B3FADA505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{373DA5E0-C6A8-42F7-BCBC-3D1B3FADA505}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +60,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2827A794-35DD-4628-8561-9E0787ECF6DF} = {F9AB4B50-A92B-4FE5-AA61-CBF5630885BD}
 		{4F1D9855-C565-4871-8878-55415479C3AF} = {F9AB4B50-A92B-4FE5-AA61-CBF5630885BD}
+		{373DA5E0-C6A8-42F7-BCBC-3D1B3FADA505} = {F9AB4B50-A92B-4FE5-AA61-CBF5630885BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {376F4A8D-BEE8-41B1-BDFC-A96E4447563A}

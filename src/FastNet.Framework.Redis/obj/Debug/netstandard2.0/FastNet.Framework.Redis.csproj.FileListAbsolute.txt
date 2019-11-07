@@ -1,0 +1,8 @@
+E:\test\FastNet.Framework\src\FastNet.Framework.Redis\obj\Debug\netstandard2.0\FastNet.Framework.Redis.csprojAssemblyReference.cache
+E:\test\FastNet.Framework\src\FastNet.Framework.Redis\obj\Debug\netstandard2.0\FastNet.Framework.Redis.AssemblyInfoInputs.cache
+E:\test\FastNet.Framework\src\FastNet.Framework.Redis\obj\Debug\netstandard2.0\FastNet.Framework.Redis.AssemblyInfo.cs
+E:\test\FastNet.Framework\src\FastNet.Framework.Redis\bin\Debug\netstandard2.0\FastNet.Framework.Redis.deps.json
+E:\test\FastNet.Framework\src\FastNet.Framework.Redis\bin\Debug\netstandard2.0\FastNet.Framework.Redis.dll
+E:\test\FastNet.Framework\src\FastNet.Framework.Redis\bin\Debug\netstandard2.0\FastNet.Framework.Redis.pdb
+E:\test\FastNet.Framework\src\FastNet.Framework.Redis\obj\Debug\netstandard2.0\FastNet.Framework.Redis.dll
+E:\test\FastNet.Framework\src\FastNet.Framework.Redis\obj\Debug\netstandard2.0\FastNet.Framework.Redis.pdb

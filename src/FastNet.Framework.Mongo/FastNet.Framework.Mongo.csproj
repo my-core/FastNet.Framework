@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Product>深圳市前海迅智系统科技有限公司</Product>
+    <Authors>yanglb</Authors>
+    <Company>深圳市前海迅智系统科技有限公司</Company>
+    <Description>FastNet.Framework.Mongo</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.9.2" />
+  </ItemGroup>
+
+</Project>

@@ -16,6 +16,14 @@ namespace FastNet.Framework.Dapper.Generator
         {
             get { return '@'; }
         }
+
+        /// <summary>
+        /// 返回自增的sql语句
+        /// </summary>
+        public override string SelectIdentitySql
+        {
+            get { return " select @@identity; "; }
+        }
         /// <summary>
         /// 分页语句
         /// </summary>

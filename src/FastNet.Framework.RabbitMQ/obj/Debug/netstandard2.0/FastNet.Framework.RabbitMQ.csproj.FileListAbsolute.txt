@@ -1,0 +1,8 @@
+E:\test\FastNet.Framework\src\FastNet.Framework.RabbitMQ\bin\Debug\netstandard2.0\FastNet.Framework.RabbitMQ.deps.json
+E:\test\FastNet.Framework\src\FastNet.Framework.RabbitMQ\bin\Debug\netstandard2.0\FastNet.Framework.RabbitMQ.dll
+E:\test\FastNet.Framework\src\FastNet.Framework.RabbitMQ\bin\Debug\netstandard2.0\FastNet.Framework.RabbitMQ.pdb
+E:\test\FastNet.Framework\src\FastNet.Framework.RabbitMQ\obj\Debug\netstandard2.0\FastNet.Framework.RabbitMQ.csprojAssemblyReference.cache
+E:\test\FastNet.Framework\src\FastNet.Framework.RabbitMQ\obj\Debug\netstandard2.0\FastNet.Framework.RabbitMQ.AssemblyInfoInputs.cache
+E:\test\FastNet.Framework\src\FastNet.Framework.RabbitMQ\obj\Debug\netstandard2.0\FastNet.Framework.RabbitMQ.AssemblyInfo.cs
+E:\test\FastNet.Framework\src\FastNet.Framework.RabbitMQ\obj\Debug\netstandard2.0\FastNet.Framework.RabbitMQ.dll
+E:\test\FastNet.Framework\src\FastNet.Framework.RabbitMQ\obj\Debug\netstandard2.0\FastNet.Framework.RabbitMQ.pdb

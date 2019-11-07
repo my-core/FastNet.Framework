@@ -1,7 +1,0 @@
-E:\test\FastNet.Framework\src\FastNet.Framework.Mongo\bin\Debug\netstandard2.0\FastNet.Framework.Mongo.deps.json
-E:\test\FastNet.Framework\src\FastNet.Framework.Mongo\bin\Debug\netstandard2.0\FastNet.Framework.Mongo.dll
-E:\test\FastNet.Framework\src\FastNet.Framework.Mongo\bin\Debug\netstandard2.0\FastNet.Framework.Mongo.pdb
-E:\test\FastNet.Framework\src\FastNet.Framework.Mongo\obj\Debug\netstandard2.0\FastNet.Framework.Mongo.AssemblyInfoInputs.cache
-E:\test\FastNet.Framework\src\FastNet.Framework.Mongo\obj\Debug\netstandard2.0\FastNet.Framework.Mongo.AssemblyInfo.cs
-E:\test\FastNet.Framework\src\FastNet.Framework.Mongo\obj\Debug\netstandard2.0\FastNet.Framework.Mongo.dll
-E:\test\FastNet.Framework\src\FastNet.Framework.Mongo\obj\Debug\netstandard2.0\FastNet.Framework.Mongo.pdb

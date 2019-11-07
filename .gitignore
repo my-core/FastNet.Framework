@@ -1,1 +1,15 @@
 /src/.vs
+/src/FastNet.Framework.RabbitMQ/bin
+/src/FastNet.Framework.Mongo/bin
+/src/FastNet.Framework.Dapper/bin
+/src/Test/Test.Redis/bin
+/src/Test/Test.RabbitMq.Publisher/bin
+/src/Test/Test.RabbitMq.Consumer/bin
+/src/FastNet.Framework.Redis/bin
+/src/Test/Test.Redis/obj
+/src/Test/Test.RabbitMq.Publisher/obj
+/src/Test/Test.RabbitMq.Consumer/obj
+/src/FastNet.Framework.Redis/obj
+/src/FastNet.Framework.RabbitMQ/obj
+/src/FastNet.Framework.Mongo/obj
+/src/FastNet.Framework.Dapper/obj

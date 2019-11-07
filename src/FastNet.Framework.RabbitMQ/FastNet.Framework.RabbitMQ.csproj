@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageProjectUrl>https://github.com/my-core/FastNet.Framework</PackageProjectUrl>
+    <Company>yangliangbin</Company>
+    <Description>A Packaging Library for RabbitMq base on RabbitMQ.Client</Description>
+    <Product>FastNet.Framework</Product>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

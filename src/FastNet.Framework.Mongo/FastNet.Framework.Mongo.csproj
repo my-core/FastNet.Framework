@@ -2,11 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Product>深圳市前海迅智系统科技有限公司</Product>
-    <Authors>yanglb</Authors>
-    <Company>深圳市前海迅智系统科技有限公司</Company>
-    <Description>FastNet.Framework.Mongo</Description>
+    <Product>FastNet.Framework</Product>
+    <Authors>yangliangbin</Authors>
+    <Company>yangliangbin</Company>
+    <Description>A CRUD operation repository  for mongo base on MongoDB.Driver</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/my-core/FastNet.Framework</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

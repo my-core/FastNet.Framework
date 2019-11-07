@@ -5,6 +5,9 @@ using System.Text;
 
 namespace FastNet.Framework.RabbitMQ
 {
+    /// <summary>
+    /// RM消息传输载体
+    /// </summary>
     public class MqMessagePayload
     {
         public MqMessagePayload()
@@ -17,6 +20,10 @@ namespace FastNet.Framework.RabbitMQ
         public byte[] Message { get; set; }
     }
 
+    /// <summary>
+    /// 消息容器
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class MqMessage<T>
     {
         public MqMessage()

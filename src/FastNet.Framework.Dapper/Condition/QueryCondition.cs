@@ -5,19 +5,32 @@ using System.Text;
 
 namespace FastNet.Framework.Dapper
 {
+    /// <summary>
+    /// dapper查询条件扩展
+    /// </summary>
     public class QueryCondition
     {
+        /// <summary>
+        /// 条件集
+        /// </summary>
         Dictionary<ConditionType, string> _condition = new Dictionary<ConditionType, string>();
         public QueryCondition()
         {
 
         }
-
+        /// <summary>
+        /// 添加条件
+        /// </summary>
+        /// <param name="conditionType"></param>
+        /// <param name="fieldName"></param>
         public void Add(ConditionType conditionType, string fieldName)
         {
             _condition.Add(conditionType, fieldName);
         }
-
+        /// <summary>
+        /// 转换为'and'连接成的sql语句
+        /// </summary>
+        /// <returns></returns>
         public string ToSqlWithAnd()
         {
             List<string> query = new List<string>();
@@ -48,7 +61,10 @@ namespace FastNet.Framework.Dapper
             }
             return query.AppendStrings(" and ");
         }
-
+        /// <summary>
+        /// 转换为'and'连接成的sql语句
+        /// </summary>
+        /// <returns></returns>
         public string ToSqlWithOr()
         {
             List<string> query = new List<string>();

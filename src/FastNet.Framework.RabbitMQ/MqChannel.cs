@@ -9,6 +9,9 @@ using System.Text;
 
 namespace FastNet.Framework.RabbitMQ
 {
+    /// <summary>
+    /// Mq信道
+    /// </summary>
     public class MqChannel
     {
         private static Logger _logger = LogManager.GetCurrentClassLogger();
@@ -46,7 +49,7 @@ namespace FastNet.Framework.RabbitMQ
                 catch (Exception ex)
                 {
                     _logger.Error(ex, "Connect, connect to mq failed due to [{0}].", ex.Message);
-                    throw;
+                    throw ex;
                 }
             }
         }

@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastNet.Framework.Mongo", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Redis", "Test\Test.Redis\Test.Redis.csproj", "{373DA5E0-C6A8-42F7-BCBC-3D1B3FADA505}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastNet.Framework.NetCrawler", "FastNet.Framework.NetCrawler\FastNet.Framework.NetCrawler.csproj", "{365FB839-4DC2-47A6-8D5D-79B05DC4F218}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{373DA5E0-C6A8-42F7-BCBC-3D1B3FADA505}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{373DA5E0-C6A8-42F7-BCBC-3D1B3FADA505}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{373DA5E0-C6A8-42F7-BCBC-3D1B3FADA505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{365FB839-4DC2-47A6-8D5D-79B05DC4F218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{365FB839-4DC2-47A6-8D5D-79B05DC4F218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{365FB839-4DC2-47A6-8D5D-79B05DC4F218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{365FB839-4DC2-47A6-8D5D-79B05DC4F218}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

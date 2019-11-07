@@ -1,0 +1,8 @@
+E:\test\FastNet.Framework\src\FastNet.Framework.NetCrawler\bin\Debug\netstandard2.0\FastNet.Framework.NetCrawler.deps.json
+E:\test\FastNet.Framework\src\FastNet.Framework.NetCrawler\bin\Debug\netstandard2.0\FastNet.Framework.NetCrawler.dll
+E:\test\FastNet.Framework\src\FastNet.Framework.NetCrawler\obj\Debug\netstandard2.0\FastNet.Framework.NetCrawler.AssemblyInfoInputs.cache
+E:\test\FastNet.Framework\src\FastNet.Framework.NetCrawler\obj\Debug\netstandard2.0\FastNet.Framework.NetCrawler.AssemblyInfo.cs
+E:\test\FastNet.Framework\src\FastNet.Framework.NetCrawler\obj\Debug\netstandard2.0\FastNet.Framework.NetCrawler.csprojAssemblyReference.cache
+E:\test\FastNet.Framework\src\FastNet.Framework.NetCrawler\bin\Debug\netstandard2.0\FastNet.Framework.NetCrawler.pdb
+E:\test\FastNet.Framework\src\FastNet.Framework.NetCrawler\obj\Debug\netstandard2.0\FastNet.Framework.NetCrawler.dll
+E:\test\FastNet.Framework\src\FastNet.Framework.NetCrawler\obj\Debug\netstandard2.0\FastNet.Framework.NetCrawler.pdb

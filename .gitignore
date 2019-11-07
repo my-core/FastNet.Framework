@@ -13,3 +13,5 @@
 /src/FastNet.Framework.RabbitMQ/obj
 /src/FastNet.Framework.Mongo/obj
 /src/FastNet.Framework.Dapper/obj
+/src/FastNet.Framework.NetCrawler/bin
+/src/FastNet.Framework.NetCrawler/obj

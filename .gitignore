@@ -15,3 +15,5 @@
 /src/FastNet.Framework.Dapper/obj
 /src/FastNet.Framework.NetCrawler/bin
 /src/FastNet.Framework.NetCrawler/obj
+/src/FastNet.Framework.JwtAuthorize/obj
+/src/FastNet.Framework.JwtAuthorize/bin

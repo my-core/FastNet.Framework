@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastNet.Framework.Mongo", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Redis", "Test\Test.Redis\Test.Redis.csproj", "{373DA5E0-C6A8-42F7-BCBC-3D1B3FADA505}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastNet.Framework.NetCrawler", "FastNet.Framework.NetCrawler\FastNet.Framework.NetCrawler.csproj", "{365FB839-4DC2-47A6-8D5D-79B05DC4F218}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastNet.Framework.NetCrawler", "FastNet.Framework.NetCrawler\FastNet.Framework.NetCrawler.csproj", "{365FB839-4DC2-47A6-8D5D-79B05DC4F218}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastNet.Framework.JwtAuthorize", "FastNet.Framework.JwtAuthorize\FastNet.Framework.JwtAuthorize.csproj", "{4AB16DE2-E308-4086-9B66-ACD5E9B95D7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{365FB839-4DC2-47A6-8D5D-79B05DC4F218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{365FB839-4DC2-47A6-8D5D-79B05DC4F218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{365FB839-4DC2-47A6-8D5D-79B05DC4F218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AB16DE2-E308-4086-9B66-ACD5E9B95D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AB16DE2-E308-4086-9B66-ACD5E9B95D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AB16DE2-E308-4086-9B66-ACD5E9B95D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AB16DE2-E308-4086-9B66-ACD5E9B95D7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

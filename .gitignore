@@ -17,3 +17,5 @@
 /src/FastNet.Framework.NetCrawler/obj
 /src/FastNet.Framework.JwtAuthorize/obj
 /src/FastNet.Framework.JwtAuthorize/bin
+/src/Test/Test.JwtAuthorize.WebApi/obj
+/src/Test/Test.JwtAuthorize.WebApi/bin

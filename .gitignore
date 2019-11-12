@@ -19,3 +19,9 @@
 /src/FastNet.Framework.JwtAuthorize/bin
 /src/Test/Test.JwtAuthorize.WebApi/obj
 /src/Test/Test.JwtAuthorize.WebApi/bin
+/src/FastNet.Framework.Consul/obj
+/src/FastNet.Framework.Consul/bin
+/src/Test/Test.Consul.A/obj
+/src/Test/Test.Consul.A/bin
+/src/Test/Test.Consul.B/obj
+/src/Test/Test.Consul.B/bin

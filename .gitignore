@@ -25,3 +25,5 @@
 /src/Test/Test.Consul.A/bin
 /src/Test/Test.Consul.B/obj
 /src/Test/Test.Consul.B/bin
+/src/Test/Test.JwtAuthorize/obj
+/src/Test/Test.JwtAuthorize/bin

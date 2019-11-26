@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using XunZhi.Framework.JwtAuthorize;
+using FastNet.Framework.JwtAuthorize;
 
-namespace Test.JwtAuthorize.WebApi.Controllers
+namespace Test.JwtAuthorize
 {
     [Authorize]
     [ApiController]

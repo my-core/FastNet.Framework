@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Http;
 
 namespace FastNet.Framework.JwtAuthorize
 {
@@ -37,31 +38,23 @@ namespace FastNet.Framework.JwtAuthorize
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(options =>
             {
-                options.RequireHttpsMetadata = false;
-                options.SaveToken = true;
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    LifetimeValidator = (before, expires, token, param) =>
-                     {
-                         var validateResult = expires > DateTime.UtcNow;
-                         return validateResult;
-                     },
-                    ValidateAudience = false,                   
-                    ValidateIssuer = false,
-                    ValidateIssuerSigningKey = true,
-                    //验证签名key
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtOptions.Secret))
-                };
-                options.Events = new JwtBearerEvents
-                {
-                    OnAuthenticationFailed = context =>
-                    {
-                        return Task.FromResult(new UnauthorizedResult());
-                    }
+                    ValidateIssuer = true,//是否验证Issuer
+                    ValidateAudience = true,//是否验证Audience
+                    ValidateLifetime = true,//是否验证失效时间
+                    ValidateIssuerSigningKey = true,//是否验证SecurityKey
+                    ValidAudience = jwtOptions.Audience,//Audience
+                    ValidIssuer = jwtOptions.Issuer,//Issuer，这两项和前面签发jwt的设置一致
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.SecretKey))//拿到SecurityKey
                 };
             });
+            //httpcontext
+            services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
+            //注册jwt配置
+            services.AddSingleton(jwtOptions);
             //注册JwtClaimed类,在需要使用的地方注入即可
-            services.AddSingleton<JwtClaimed>();
+            services.AddTransient<JwtClaimed>();
         }
     }
 }

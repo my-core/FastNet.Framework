@@ -5,8 +5,16 @@ namespace FastNet.Framework.JwtAuthorize
     public class JwtOptions
     {
         /// <summary>
-        /// jwt token 密钥
+        /// 证书颁发者
         /// </summary>
-        public string Secret { get; set; }
+        public string Issuer { get; set; }
+        /// <summary>
+        /// 允许使用的角色
+        /// </summary>
+        public string Audience { get; set; }
+        /// <summary>
+        /// 加密字符串
+        /// </summary>
+        public string SecretKey { get; set; }
     }
 }

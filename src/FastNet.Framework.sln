@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Consul.A", "Test\Test.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Consul.B", "Test\Test.Consul.B\Test.Consul.B.csproj", "{F0C469EA-7673-4B91-A99F-771C65D9F899}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.JwtAuthorize", "Test\Test.JwtAuthorize\Test.JwtAuthorize.csproj", "{663910D0-44FB-4CAC-8246-E8ED7979791F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.JwtAuthorize", "Test\Test.JwtAuthorize\Test.JwtAuthorize.csproj", "{663910D0-44FB-4CAC-8246-E8ED7979791F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

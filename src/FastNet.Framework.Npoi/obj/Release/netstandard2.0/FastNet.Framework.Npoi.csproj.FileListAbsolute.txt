@@ -1,0 +1,4 @@
+E:\test\FastNet.Framework\src\FastNet.Framework.Npoi\bin\Release\netstandard2.0\FastNet.Framework.Npoi.deps.json
+E:\test\FastNet.Framework\src\FastNet.Framework.Npoi\bin\Release\netstandard2.0\FastNet.Framework.Npoi.dll
+E:\test\FastNet.Framework\src\FastNet.Framework.Npoi\obj\Release\netstandard2.0\FastNet.Framework.Npoi.AssemblyInfoInputs.cache
+E:\test\FastNet.Framework\src\FastNet.Framework.Npoi\obj\Release\netstandard2.0\FastNet.Framework.Npoi.AssemblyInfo.cs

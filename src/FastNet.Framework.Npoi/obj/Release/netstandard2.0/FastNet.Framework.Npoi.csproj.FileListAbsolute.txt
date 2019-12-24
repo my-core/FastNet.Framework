@@ -2,3 +2,7 @@ E:\test\FastNet.Framework\src\FastNet.Framework.Npoi\bin\Release\netstandard2.0\
 E:\test\FastNet.Framework\src\FastNet.Framework.Npoi\bin\Release\netstandard2.0\FastNet.Framework.Npoi.dll
 E:\test\FastNet.Framework\src\FastNet.Framework.Npoi\obj\Release\netstandard2.0\FastNet.Framework.Npoi.AssemblyInfoInputs.cache
 E:\test\FastNet.Framework\src\FastNet.Framework.Npoi\obj\Release\netstandard2.0\FastNet.Framework.Npoi.AssemblyInfo.cs
+E:\test\FastNet.Framework\src\FastNet.Framework.Npoi\obj\Release\netstandard2.0\FastNet.Framework.Npoi.csprojAssemblyReference.cache
+E:\test\FastNet.Framework\src\FastNet.Framework.Npoi\bin\Release\netstandard2.0\FastNet.Framework.Npoi.pdb
+E:\test\FastNet.Framework\src\FastNet.Framework.Npoi\obj\Release\netstandard2.0\FastNet.Framework.Npoi.dll
+E:\test\FastNet.Framework\src\FastNet.Framework.Npoi\obj\Release\netstandard2.0\FastNet.Framework.Npoi.pdb

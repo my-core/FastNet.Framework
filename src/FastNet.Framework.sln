@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Consul.B", "Test\Test.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.JwtAuthorize", "Test\Test.JwtAuthorize\Test.JwtAuthorize.csproj", "{663910D0-44FB-4CAC-8246-E8ED7979791F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastNet.Framework.Npoi", "FastNet.Framework.Npoi\FastNet.Framework.Npoi.csproj", "{2922B0A8-3138-4A26-9538-1C41BEEA7CA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastNet.Framework.Npoi", "FastNet.Framework.Npoi\FastNet.Framework.Npoi.csproj", "{2922B0A8-3138-4A26-9538-1C41BEEA7CA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Npoi", "Test\Test.Npoi\Test.Npoi.csproj", "{66F02DF0-9F6D-4636-85D9-60D1B48AFD0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +97,10 @@ Global
 		{2922B0A8-3138-4A26-9538-1C41BEEA7CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2922B0A8-3138-4A26-9538-1C41BEEA7CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2922B0A8-3138-4A26-9538-1C41BEEA7CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66F02DF0-9F6D-4636-85D9-60D1B48AFD0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F02DF0-9F6D-4636-85D9-60D1B48AFD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F02DF0-9F6D-4636-85D9-60D1B48AFD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F02DF0-9F6D-4636-85D9-60D1B48AFD0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,6 +112,7 @@ Global
 		{20A5332E-FE3D-45B9-BF99-F4C8E93F3646} = {F9AB4B50-A92B-4FE5-AA61-CBF5630885BD}
 		{F0C469EA-7673-4B91-A99F-771C65D9F899} = {F9AB4B50-A92B-4FE5-AA61-CBF5630885BD}
 		{663910D0-44FB-4CAC-8246-E8ED7979791F} = {F9AB4B50-A92B-4FE5-AA61-CBF5630885BD}
+		{66F02DF0-9F6D-4636-85D9-60D1B48AFD0D} = {F9AB4B50-A92B-4FE5-AA61-CBF5630885BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {376F4A8D-BEE8-41B1-BDFC-A96E4447563A}

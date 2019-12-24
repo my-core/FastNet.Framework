@@ -1,4 +1,5 @@
-﻿using NPOI.SS.UserModel;
+﻿using Newtonsoft.Json;
+using NPOI.SS.UserModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,38 +7,62 @@ using System.Text;
 
 namespace FastNet.Framework.Npoi
 {
-    class ExcelUtils
+    public class ExcelUtils
     {
-        public void Read(string filePath)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T">序列化对象</typeparam>
+        /// <param name="excelFilePath">xls文件路径</param>
+        /// <param name="sheetIndex">工作表索引,默认0</param>
+        /// <returns></returns>
+        public static List<T> Read<T>(string excelFilePath, int sheetIndex = 0)
         {
-            IWorkbook workbook = WorkbookFactory.Create(filePath);
-            int sheetCount = workbook.NumberOfSheets;
-            for (int sheetIndex = 0; sheetIndex < sheetCount; sheetIndex++)
+            List<T> list = new List<T>();
+            IWorkbook workbook = WorkbookFactory.Create(excelFilePath);
+            //int sheetCount = workbook.NumberOfSheets;
+
+            //获取第sheetIndex个工作表
+            ISheet sheet = workbook.GetSheetAt(sheetIndex);
+            if (sheet == null)
             {
-                ISheet sheet = workbook.GetSheetAt(sheetIndex);//获取第sheetIndex个工作表  
-                if (sheet == null) 
-                    continue;
-
-                IRow row = sheet.GetRow(0);//获取第一行
-                if (row == null) 
-                    continue;
-
-                int firstCellNum = row.FirstCellNum;
-                int lastCellNum = row.LastCellNum;
-                if (firstCellNum == lastCellNum) continue;
-                string[] fields = row.Cells.Select(c => c.ToString()).ToArray();
-                
-
-                for (int i = 1; i <= sheet.LastRowNum; i++)//对工作表除去表头的每一行
-                {
-                    string cellValue = "";
-                    for (int j = firstCellNum; j < lastCellNum; j++)
-                    {
-                        cellValue += sheet.GetRow(i).GetCell(j).ToString() + ",";//将每一行的数据以,相连
-                    }
-                }
+                throw new Exception($"can not find sheet with index {sheetIndex}");
             }
+            //获取第一行
+            IRow row = sheet.GetRow(0);
+            if (row == null)
+            {
+                throw new Exception($"no row with rownum 0");
+            }
+
+            int firstCellNum = row.FirstCellNum;
+            int lastCellNum = row.LastCellNum;
+            if (firstCellNum == lastCellNum)
+            {
+                throw new Exception($"no cell,firstCellNumm[{firstCellNum}],lastCellNum[{lastCellNum}]");
+            }
+            string[] fields = row.Cells.Select(c => c.ToString()).ToArray();
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("[");
+            //获取每一行(除去首行)
+            for (int i = 1; i <= sheet.LastRowNum; i++)
+            {
+                if (i > 1)
+                    sb.Append(",");
+                string cellValue = string.Empty;
+                for (int j = firstCellNum; j < lastCellNum; j++)
+                {
+                    if (cellValue != string.Empty)
+                        cellValue += ",";
+                    cellValue += $"\"{fields[j]}\":\"{sheet.GetRow(i).GetCell(j).ToString()}\"";
+                }
+                sb.Append("{" + cellValue + "}");
+            }
+            sb.Append("]");
+            list = JsonConvert.DeserializeObject<List<T>>(sb.ToString());
             workbook.Close();
+            return list;
         }
     }
 }

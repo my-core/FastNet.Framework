@@ -55,7 +55,7 @@ namespace FastNet.Framework.Npoi
                 {
                     if (cellValue != string.Empty)
                         cellValue += ",";
-                    cellValue += $"\"{fields[j]}\":\"{sheet.GetRow(i).GetCell(j).ToString()}\"";
+                    cellValue += $"\"{fields[j].Trim()}\":\"{sheet.GetRow(i).GetCell(j).ToString()}\"";
                 }
                 sb.Append("{" + cellValue + "}");
             }

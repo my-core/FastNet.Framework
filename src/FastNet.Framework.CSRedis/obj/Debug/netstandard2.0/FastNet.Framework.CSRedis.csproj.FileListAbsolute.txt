@@ -1,8 +1,0 @@
-E:\test\FastNet.Framework\src\FastNet.Framework.CSRedis\bin\Debug\netstandard2.0\FastNet.Framework.CSRedis.deps.json
-E:\test\FastNet.Framework\src\FastNet.Framework.CSRedis\bin\Debug\netstandard2.0\FastNet.Framework.CSRedis.dll
-E:\test\FastNet.Framework\src\FastNet.Framework.CSRedis\bin\Debug\netstandard2.0\FastNet.Framework.CSRedis.pdb
-E:\test\FastNet.Framework\src\FastNet.Framework.CSRedis\obj\Debug\netstandard2.0\FastNet.Framework.CSRedis.csprojAssemblyReference.cache
-E:\test\FastNet.Framework\src\FastNet.Framework.CSRedis\obj\Debug\netstandard2.0\FastNet.Framework.CSRedis.AssemblyInfoInputs.cache
-E:\test\FastNet.Framework\src\FastNet.Framework.CSRedis\obj\Debug\netstandard2.0\FastNet.Framework.CSRedis.AssemblyInfo.cs
-E:\test\FastNet.Framework\src\FastNet.Framework.CSRedis\obj\Debug\netstandard2.0\FastNet.Framework.CSRedis.dll
-E:\test\FastNet.Framework\src\FastNet.Framework.CSRedis\obj\Debug\netstandard2.0\FastNet.Framework.CSRedis.pdb

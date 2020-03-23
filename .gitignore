@@ -29,3 +29,4 @@
 /src/Test/Test.JwtAuthorize/bin
 /src/FastNet.Framework.Npoi/obj
 /src/FastNet.Framework.Npoi/bin
+/src/FastNet.Framework.CSRedis/*

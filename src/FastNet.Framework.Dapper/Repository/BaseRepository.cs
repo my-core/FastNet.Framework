@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace FastNet.Framework.Dapper
 {
@@ -383,6 +385,380 @@ namespace FastNet.Framework.Dapper
         }
         #endregion
 
+        #region ---InsertAsync---
+        /// <summary>
+        /// 插入
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="t"></param>
+        /// <returns>返回自增</returns>
+        public virtual async Task<long> InsertAsync<T>(T t)
+        {
+            try
+            {
+                string sql = _sqlGenerator.GetInsertSql<T>();
+                using (var conn = OpenConnection())
+                {
+                    var result = await conn.ExecuteScalarAsync(sql, t);
+                    return Convert.ToInt64(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// 插入
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        public virtual async Task<int> InsertAsync<T>(List<T> listT)
+        {
+            try
+            {
+                string sql = _sqlGenerator.GetInsertSql<T>();
+                using (var conn = OpenConnection())
+                {
+                    return await conn.ExecuteAsync(sql, listT);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region ---UpdateAsync---
+        /// <summary>
+        /// 更新
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        public virtual async Task<int> UpdateAsync<T>(T t)
+        {
+            try
+            {
+                string sql = _sqlGenerator.GetUpdateSql<T>(t);
+                using (var conn = OpenConnection())
+                {
+                    return await conn.ExecuteAsync(sql, t);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        /// <summary>
+        /// 更新
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        public virtual async Task<int> UpdateAsync<T>(T t, object param)
+        {
+            try
+            {
+                string sql = _sqlGenerator.GetUpdateSql<T>(t, param);
+                using (var conn = OpenConnection())
+                {
+                    return await conn.ExecuteAsync(sql, param);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region ---DeleteAsync---
+        /// <summary>
+        /// 全表删除
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public virtual async Task<int> DeleteAsync<T>()
+        {
+            try
+            {
+                string sql = _sqlGenerator.GetDeleteSql<T>();
+                using (var conn = OpenConnection())
+                {
+                    return await conn.ExecuteAsync(sql);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// 按指定条件删除
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="hs"></param>
+        /// <returns></returns>
+        public async Task<int> DeleteAsync<T>(object param)
+        {
+            try
+            {
+                string sql = _sqlGenerator.GetDeleteSql<T>(param);
+                using (var conn = OpenConnection())
+                {
+                    return await conn.ExecuteAsync(sql, param);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region ---GetModelAsync---
+        /// <summary>
+        /// 按指定条件查询(单记录)
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="hs"></param>
+        /// <returns></returns>
+        public virtual async Task<T> GetModelAsync<T>(object param)
+        {
+            try
+            {
+                string sql = _sqlGenerator.GetSelectSql<T>(param);
+                using (var conn = OpenConnection())
+                {
+                    return await conn.QuerySingleOrDefaultAsync<T>(sql, param);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region ---GetListAsync---
+
+        /// <summary>
+        /// 全表查询
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public virtual async Task<List<T>> GetListAsync<T>()
+        {
+            try
+            {
+                string sql = _sqlGenerator.GetSelectSql<T>();
+                using (var conn = OpenConnection())
+                {
+                    var list= await conn.QueryAsync<T>(sql);
+                    return list.AsList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// 按指定条件查询
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="hs"></param>
+        /// <returns></returns>
+        public virtual async Task<List<T>> GetListAsync<T>(object param)
+        {
+            try
+            {
+                string sql = _sqlGenerator.GetSelectSql<T>(param);
+                using (var conn = OpenConnection())
+                {
+                    var list = await conn.QueryAsync<T>(sql, param);
+                    return list.AsList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// 指定条件联表查询
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="W"></typeparam>
+        /// <param name="sql"></param>
+        /// <param name="where"></param>
+        /// <returns></returns>
+        public virtual async Task<List<T>> GetListAsync<T>(string sql, object param)
+        {
+            try
+            {
+                using (var conn = OpenConnection())
+                {
+                    var list = await conn.QueryAsync<T>(sql, param);
+                    return list.AsList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region ---GetPageListAsync---
+
+        /// <summary>
+        /// 分页查询
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="pageIndex">页索引</param>
+        /// <param name="pageSize">页大小</param>
+        /// <param name="orderBy">排序</param>
+        /// <returns></returns>
+        public virtual async Task<PagedList<T>> GetPageListAsync<T>(int pageIndex, int pageSize, string orderBy)
+        {
+            try
+            {
+                string sqlCount = _sqlGenerator.GetCountSql<T>();
+                string sqlList = _sqlGenerator.GetPageListSql<T>(pageIndex, pageSize, orderBy);
+                string sql = sqlCount + ";" + sqlList;
+                using (var conn = OpenConnection())
+                {
+                    var multi = await conn.QueryMultipleAsync(sql);
+                    var totalCount = multi.Read<int>().AsList().FirstOrDefault();
+                    List<T> list = multi.Read<T>().AsList();
+                    return new PagedList<T>(list, pageIndex, pageSize, totalCount);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// 分页查询
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sql">sql查询语句</param>
+        /// <param name="param">sql参数</param>
+        /// <param name="pageIndex">页索引</param>
+        /// <param name="pageSize">页大小</param>
+        /// <param name="orderBy">排序</param>
+        /// <returns></returns>
+        public virtual async Task<PagedList<T>> GetPagedListAsync<T>(object param, int pageIndex, int pageSize, string orderBy)
+        {
+            try
+            {
+                string sqlCount = _sqlGenerator.GetCountSql<T>(param);
+                string sqlList = _sqlGenerator.GetPageListSql<T>(param, pageIndex, pageSize, orderBy);
+                string sql = sqlCount + ";" + sqlList;
+                using (var conn = OpenConnection())
+                {
+                    var multi = await conn.QueryMultipleAsync(sql,param);
+                    var totalCount = multi.Read<int>().AsList().FirstOrDefault();
+                    List<T> list = multi.Read<T>().AsList();
+                    return new PagedList<T>(list, pageIndex, pageSize, totalCount);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// 分页查询
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sql">sql查询语句</param>
+        /// <param name="param">sql参数</param>
+        /// <param name="pageIndex">页索引</param>
+        /// <param name="pageSize">页大小</param>
+        /// <param name="orderBy">排序</param>
+        /// <returns></returns>
+        public virtual async Task<PagedList<T>> GetPagedListAsync<T>(string sql, object param, int pageIndex, int pageSize, string orderBy)
+        {
+            try
+            {
+                string sqlCount = string.Format("select count(1) from ({0}) as A;", sql);
+                string sqlList = _sqlGenerator.GetPageListSql<T>(sql, pageIndex, pageSize, orderBy);
+                sql = sqlCount + sqlList;
+                using (var conn = OpenConnection())
+                {
+                    var multi = await conn.QueryMultipleAsync(sql, param);
+                    var totalCount = multi.Read<int>().AsList().FirstOrDefault();
+                    List<T> list = multi.Read<T>().AsList();
+                    return new PagedList<T>(list, pageIndex, pageSize, totalCount);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
+        #region ---GetCountAsync---
+
+        /// <summary>
+        /// 全表查询计数
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public virtual async Task<int> GetCountAsync<T>()
+        {
+            try
+            {
+                string sql = _sqlGenerator.GetCountSql<T>();
+                using (var conn = OpenConnection())
+                {
+                    var result = await conn.ExecuteScalarAsync(sql);
+                    return Convert.ToInt32(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        /// <summary>
+        /// 按指定条件查询计数
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public async Task<int> GetCountAsync<T>(object param)
+        {
+            try
+            {
+                string sql = _sqlGenerator.GetCountSql<T>(param);
+                using (var conn = OpenConnection())
+                {
+                    var result = await conn.ExecuteScalarAsync(sql, param);
+                    return Convert.ToInt32(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
         #region ---ExecuteSql---
         /// <summary>
         /// 执行SQL语句,返回影响的行数
@@ -467,7 +843,6 @@ namespace FastNet.Framework.Dapper
         {
             throw new NotImplementedException();
         }
-
         /// <summary>
         /// 执行SQL语句,返回结果集中的第一个数据表
         /// </summary>
@@ -479,7 +854,6 @@ namespace FastNet.Framework.Dapper
         {
             throw new NotImplementedException();
         }
-
         /// <summary>
         /// 执行SQL语句,返回结果集
         /// </summary>

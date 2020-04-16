@@ -268,11 +268,13 @@ namespace FastNet.Framework.Dapper
         {
             try
             {
-                string sql = _sqlGenerator.GetPageListSql<T>(pageIndex, pageSize, orderBy);
+                string sqlCount = _sqlGenerator.GetCountSql<T>();
+                string sqlList = _sqlGenerator.GetPageListSql<T>(pageIndex, pageSize, orderBy);
                 using (var conn = OpenConnection())
                 {
-                    int totalCount = GetCount<T>();
-                    List<T> list = conn.Query<T>(sql).AsList();
+                    var multi = conn.QueryMultiple($"{sqlCount};{sqlList}");
+                    int totalCount = multi.Read<int>().FirstOrDefault();
+                    List<T> list = multi.Read<T>().AsList();
                     return new PagedList<T>(list, pageIndex, pageSize, totalCount);
                 }
             }
@@ -296,11 +298,13 @@ namespace FastNet.Framework.Dapper
         {
             try
             {
-                string sql = _sqlGenerator.GetPageListSql<T>(param, pageIndex, pageSize, orderBy);
+                string sqlCount = _sqlGenerator.GetCountSql<T>(param);
+                string sqlList = _sqlGenerator.GetPageListSql<T>(param, pageIndex, pageSize, orderBy);
                 using (var conn = OpenConnection())
                 {
-                    int totalCount = GetCount<T>(param);
-                    List<T> list = conn.Query<T>(sql, param).AsList();
+                    var multi = conn.QueryMultiple($"{sqlCount};{sqlList}", param);
+                    int totalCount = multi.Read<int>().FirstOrDefault();
+                    List<T> list = multi.Read<T>().AsList();
                     return new PagedList<T>(list, pageIndex, pageSize, totalCount);
                 }
             }
@@ -324,12 +328,13 @@ namespace FastNet.Framework.Dapper
         {
             try
             {
-                string getCountSql = string.Format("select count(1) from ({0}) as A", sql);
+                string sqlCount = string.Format("select count(1) from ({0}) as A;", sql);
+                string sqlList = _sqlGenerator.GetPageListSql<T>(sql, pageIndex, pageSize, orderBy);
                 using (var conn = OpenConnection())
                 {
-                    int totalCount = Convert.ToInt32(conn.ExecuteScalar(getCountSql, param));
-                    sql = _sqlGenerator.GetPageListSql<T>(sql, pageIndex, pageSize, orderBy);
-                    List<T> list = conn.Query<T>(sql, param).AsList();
+                    var multi = conn.QueryMultiple($"{sqlCount}{sqlList}", param);
+                    int totalCount = multi.Read<int>().FirstOrDefault();
+                    List<T> list = multi.Read<T>().AsList();
                     return new PagedList<T>(list, pageIndex, pageSize, totalCount);
                 }
             }
@@ -634,11 +639,10 @@ namespace FastNet.Framework.Dapper
             {
                 string sqlCount = _sqlGenerator.GetCountSql<T>();
                 string sqlList = _sqlGenerator.GetPageListSql<T>(pageIndex, pageSize, orderBy);
-                string sql = sqlCount + ";" + sqlList;
                 using (var conn = OpenConnection())
                 {
-                    var multi = await conn.QueryMultipleAsync(sql);
-                    var totalCount = multi.Read<int>().AsList().FirstOrDefault();
+                    var multi = await conn.QueryMultipleAsync($"{sqlCount};{sqlList}");
+                    int totalCount = multi.Read<int>().FirstOrDefault();
                     List<T> list = multi.Read<T>().AsList();
                     return new PagedList<T>(list, pageIndex, pageSize, totalCount);
                 }
@@ -665,11 +669,10 @@ namespace FastNet.Framework.Dapper
             {
                 string sqlCount = _sqlGenerator.GetCountSql<T>(param);
                 string sqlList = _sqlGenerator.GetPageListSql<T>(param, pageIndex, pageSize, orderBy);
-                string sql = sqlCount + ";" + sqlList;
                 using (var conn = OpenConnection())
                 {
-                    var multi = await conn.QueryMultipleAsync(sql,param);
-                    var totalCount = multi.Read<int>().AsList().FirstOrDefault();
+                    var multi = await conn.QueryMultipleAsync($"{sqlCount};{sqlList}", param);
+                    int totalCount = multi.Read<int>().FirstOrDefault();
                     List<T> list = multi.Read<T>().AsList();
                     return new PagedList<T>(list, pageIndex, pageSize, totalCount);
                 }
@@ -696,11 +699,10 @@ namespace FastNet.Framework.Dapper
             {
                 string sqlCount = string.Format("select count(1) from ({0}) as A;", sql);
                 string sqlList = _sqlGenerator.GetPageListSql<T>(sql, pageIndex, pageSize, orderBy);
-                sql = sqlCount + sqlList;
                 using (var conn = OpenConnection())
                 {
-                    var multi = await conn.QueryMultipleAsync(sql, param);
-                    var totalCount = multi.Read<int>().AsList().FirstOrDefault();
+                    var multi = await conn.QueryMultipleAsync($"{sqlCount}{sqlList}", param);
+                    int totalCount = multi.Read<int>().FirstOrDefault();
                     List<T> list = multi.Read<T>().AsList();
                     return new PagedList<T>(list, pageIndex, pageSize, totalCount);
                 }

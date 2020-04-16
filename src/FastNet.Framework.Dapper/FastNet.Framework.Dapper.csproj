@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>A CRUD operation repository  Based on Dapper</Description>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>yangliangbin</Authors>
     <PackageProjectUrl>https://github.com/my-core/FastNet.Framework</PackageProjectUrl>
     <Company>yangliangbin</Company>
